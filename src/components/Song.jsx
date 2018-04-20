@@ -6,7 +6,7 @@ class Song extends Component {
     const altTag = `${this.props.title} by ${this.props.artist}`;
 
     return (
-      <div className="song">
+      <div>
         <img
           alt={"Play " + altTag}
           id={this.props.position}
@@ -15,10 +15,22 @@ class Song extends Component {
           onClick={() => {this.props.handlePlayPause(this.audio)}}
         />
 
+        <img
+          src={this.props.image}
+          alt={altTag} />
+
+        <div>
+          <h3>{this.props.position}. {this.props.title}</h3>
+          <h4>{this.props.artist}</h4>
+        </div>
+
+        <audio
+          ref={(audio) => this.audio = audio}
+          id={'audio' + this.props.position}
+          src={this.props.audio} />
       </div>
     );
   }
 };
-
 
 export default Song;
