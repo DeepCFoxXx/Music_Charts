@@ -29,6 +29,15 @@ class ChartContainer extends Component{
     request.send();
   }
 
+  handlePlayPause(audio) {
+    audio.paused ? audio.play() : audio.pause();
+    audio.classList.toggle('playing');
+  }
+
+  handleSelectChange(event) {
+    this.loadSongs(event.target.value);
+  }
+
 }
 
 export default ChartContainer;
