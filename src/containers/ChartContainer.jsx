@@ -11,6 +11,24 @@ class ChartContainer extends Component{
     this.handleSelectChange = this.handleSelectChange.bind(this);
     this.handlePlayPause = this.handlePlayPause.bind(this);
   }
+
+  componentDidMount() {
+    this.loadSongs(this.props.genres[0].url)
+  }
+
+  loadSongs(url) {
+    const request = new XMLHttpRequest();
+    request.open('GET', url);
+    request.onload = () => {
+      if (request.status === 200) {
+        const jsonString = request.responseText;
+        const songsList = JSON.parse(jsonString);
+        this.setState({songs: songsList.feed.entry});
+      }
+    };
+    request.send();
+  }
+
 }
 
 export default ChartContainer;
