@@ -38,6 +38,22 @@ class ChartContainer extends Component{
     this.loadSongs(event.target.value);
   }
 
+  render() {
+    return (
+      <div>
+        <TitleBar
+          handleSelectChange={this.handleSelectChange}
+          genres={this.props.genres}
+        />
+        <Chart
+          songs={this.state.songs}
+          url={this.props.genres[0].url}
+          handleSelectChange={this.handleSelectChange}
+          handlePlayPause={this.handlePlayPause}
+        />
+      </div>
+    )
+  }
 }
 
 export default ChartContainer;
