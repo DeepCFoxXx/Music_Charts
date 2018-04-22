@@ -6,12 +6,12 @@ class Song extends Component {
     const altTag = `${this.props.title} by ${this.props.artist}`;
 
     return (
-      <div>
+      <div id="main">
         <img
           alt={"Play " + altTag}
           id={this.props.position}
           className='audio-control'
-          src='https://www.mariowiki.com/images/thumb/f/f5/StarMK8.png/200px-StarMK8.png'
+          src='https://i.pinimg.com/originals/75/7c/dd/757cdd2b437b993d4462d1a2f7ac20ba.png'
           onClick={() => {this.props.handlePlayPause(this.audio)}}
         />
 
