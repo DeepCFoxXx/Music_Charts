@@ -3,16 +3,20 @@ body {
   padding: 0;
   font-family: sans-serif;
   align-content: center;
-
+  background-color: hotpink;
+  font-size: 15px;
+  color: white;
 }
 
-h1{
+h1 {
   text-align: center;
+  text-decoration: underline;
+  font-size: 30px;
 }
 
 img {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
 }
 
 div {
@@ -20,4 +24,14 @@ div {
   padding-right: 30px;
   padding-bottom: 20px;
   padding-left: 60px;
+}
+
+select {
+  font-size: 20px;
+  border-radius: 50%;
+  color: white;
+  background-color: hotpink;
+  padding: 14px 40px;
+  border-color: white;
+  border-width: thick;
 }
